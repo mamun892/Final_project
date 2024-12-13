@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            scroll-behavior: smooth;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: rgb(117, 117, 117);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .about,
+        .projects,
+        .contact,
+        .register {
+            padding: 50px 0;
+        }
+
+        .projects .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projects .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #ebebeb;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .dark-mode .navbar {
+            background-color: #333;
+        }
+
+        .dark-mode .hero {
+            background-color: #1e1e1e;
+        }
+
+        .dark-mode .card {
+            background-color: #2d2d2d;
+            color: white;
+        }
+
+        /* Image Gallery */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Simple Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#hero">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+                <li class="nav-item">
+                    <button class="btn btn-dark" id="toggleDarkMode">Dark Mode</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I design and develop beautiful websites and applications.</p>
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+        </div>
+    </section>
+
+    <section id="about" class="about text-center">
+        <h2>About Me</h2>
+        <p>Hi, I'm MD MAMUN, a student with a passion for coding.
+            I know HTML, CSS, JavaScript, C, and C++, and I enjoy solving
+            problems and bringing ideas to life through programming. I'm
+            always eager to learn new technologies and improve my skills.
+            Let's connect and create something amazing!
+        </p>
+        <img src="./mamun.png" alt="My Photo" class="img-fluid rounded-circle" style="max-width: 200px;">
+    </section>
+
+    <section id="projects" class="projects container">
+        <h2 class="text-center">My Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./DALL·E 2024-12-12 20.31.01 - A thumbnail for a responsive website project, showing a clean and modern multi-page website design with a navigation bar, hero section, and adaptive l.webp" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Responsive Multi-Page Website</h5>
+                        <p class="card-text">A fully responsive and visually appealing multi-page
+                            website built using HTML, CSS, Bootstrap, and JavaScript. It features a
+                            clean layout, animations, and adaptive design for various devices.
+                            <br>Technologies: HTML, CSS, Bootstrap, JavaScript
+                        </p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./DALL·E 2024-12-12 20.31.05 - A thumbnail for a weather dashboard project, featuring a sleek user interface showing real-time weather conditions, a five-day forecast, and interacti.webp" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather Dashboard</h5>
+                        <p class="card-text">A dynamic weather dashboard that fetches real-time weather data using an
+                            API. The app allows users to search for any city and view the current weather, a 5-day
+                            forecast, and additional data like wind speed and humidity.
+                            <br>Technologies: HTML, CSS, JavaScript
+                        </p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./DALL·E 2024-12-12 20.31.09 - A thumbnail for an interactive quiz app project, featuring a clean user interface with multiple-choice questions, a timer, and a score tracker. The im.webp" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Interactive Quiz App</h5>
+                        <p class="card-text">A JavaScript-powered quiz application that tests users’ knowledge with
+                            multiple-choice questions. The app tracks scores, shows results, and includes a timer for
+                            added challenge. <br>Technologies: HTML, CSS, JavaScript
+                        </p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact text-center">
+        <h2>Contact Me</h2>
+        <form class="w-50 mx-auto">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <section id="register" class="register text-center">
+        <h2>Register</h2>
+        <form id="registerForm" class="w-50 mx-auto">
+            <div class="form-group">
+                <input type="text" id="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password"
+                    required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+            } else {
+                alert('Registration successful!');
+            }
+        });
+
+        // Dark Mode Toggle
+        document.getElementById('toggleDarkMode').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
